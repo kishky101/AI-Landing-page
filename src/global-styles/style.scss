@@ -1,0 +1,30 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+@import "styles/main.scss";
+@import "styles/cards.scss";
+
+body {
+  font-family: var(--font);
+  color: var(--text-color);
+  background: var(--background-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //padding: 159px 152px;
+
+  @media screen and (max-width: 600px) {
+    padding: 50px 50px;
+  }
+  @media screen and (max-width: 400px) {
+    padding: 24px 10px;
+  }
+}
+
+p {
+  color: var(--text-color);
+}
