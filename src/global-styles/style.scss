@@ -15,13 +15,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  //padding: 159px 152px;
+  padding: 159px auto;
 
   @media screen and (max-width: 600px) {
-    padding: 50px 50px;
+    padding: inherit 50px;
   }
   @media screen and (max-width: 400px) {
-    padding: 24px 10px;
+    padding: inherit 10px;
   }
 }
 
