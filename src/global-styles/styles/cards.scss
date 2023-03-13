@@ -1,5 +1,14 @@
 $card-color:  #272D42;
 
+%card-image {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
 .main-container__cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -33,29 +42,29 @@ $card-color:  #272D42;
         letter-spacing: 1px;
     }
 
-    .card-image {
-        width: 4rem;
-        height: 4rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 20px;
 
-        &.purple {
-            background-color: #373155;
-        }
+    .card-image--purple {
+        @extend %card-image;
+        background-color: #373155;
+    }
 
-        &.blue {
-            background-color: #2C3455;
-        }
+    .card-image--blue {
+        @extend %card-image;
+        background-color: #2C3455;
+    }
 
-        &.green {
-            background-color: #274255;
-        }
+    .card-image--green {
+        @extend %card-image;
+        background-color: #274255;
+    }
 
-        &.yellow {
-            background-color: #3D413F;
-        }
+    .card-image--yellow {
+        @extend %card-image;
+        background-color: #3D413F;
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 10px;
     }
 
     @media screen and (max-width: 400px) {

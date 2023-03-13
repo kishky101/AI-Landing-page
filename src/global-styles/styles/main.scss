@@ -34,5 +34,19 @@
     @media screen and (max-width: 600px) {
         width: auto;
         margin: 3rem auto;
+
+        .main-container__texts {
+            width: auto;
+            padding: 10px;
+        }
+        
     }
+
+    @media screen and (max-width: 400px) {
+        .main-container__h1 {
+            font-size: 2rem;
+        }
+    }
+
+ 
 }

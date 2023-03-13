@@ -18,10 +18,11 @@ body {
   padding: 159px auto;
 
   @media screen and (max-width: 600px) {
-    padding: inherit 50px;
+    height: auto;
+    //padding: inherit 50px;
   }
   @media screen and (max-width: 400px) {
-    padding: inherit 10px;
+    //padding: inherit 10px;
   }
 }
 
