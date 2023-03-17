@@ -1,0 +1,134 @@
+$card-color:  #272D42;
+
+%card-image {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    line-height: var(--24--px);
+    text-align: center;
+}
+
+.main-container {
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: var(--24--px);
+        row-gap: 31px;
+        max-width: 560px;
+        padding-top: 2rem;
+    }
+
+    &__card {
+        background-color: $card-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border-radius: var(--24--px);
+        padding:var(--24--px) 16px;
+        max-width: 268px;
+    }
+    
+    &__h2 {
+        font-weight: 500;
+        font-size: 20px; 
+        text-align: center;
+    }
+
+    &__p {
+        text-align: center;
+        font-size: var(--16--px);
+        font-weight: 100;
+        opacity: .5;
+        line-height: var(--24--px);
+    }
+
+    &__svg {
+
+        &--purple {
+            @extend %card-image;
+            background-color: #373155;
+        }
+
+        &--blue {
+            @extend %card-image;
+            background-color: #2C3455;
+        }
+    
+        &--green {
+            @extend %card-image;
+            background-color: #274255;
+        }
+    
+        &--yellow {
+            @extend %card-image;
+            background-color: #3D413F;
+            height: 4rem;
+        }
+
+    }
+
+    @media screen and (max-width: 835px) {
+
+        %card-image {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-bottom: 16px;
+        }
+
+        &__cards{
+            width: 496px;
+            max-width: 496px;
+            column-gap: var(--16--px);
+            row-gap: var(--16--px);
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        &__card {
+            padding: 0;
+            gap: 0;
+        }
+
+        &__h2 {
+            width: 100%;
+        }
+
+        &__p {
+            font-size: var(--14--px);
+            line-height: 22px;
+            margin-bottom: 20px;
+            margin: 16px 17px 20px 14px;
+        }
+    }
+    
+
+    @media screen and (max-width: 450px) {
+        &__cards {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            row-gap: var(--16--px);
+            place-items: center;
+            max-width: var(--343--px);
+        }
+
+        &__card {
+            width: 100%;
+            max-width: var(--343--px);
+        }
+
+        &__P {
+            margin: 16px 20px 20px 20px;
+            padding: 0 5px;
+        }
+    } 
+}
+

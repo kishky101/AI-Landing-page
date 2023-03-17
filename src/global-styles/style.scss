@@ -1,8 +1,9 @@
 @import "styles/normalize.scss";
 @import "styles/root.scss";
 @import "styles/fonts.scss";
-@import "styles/main.scss";
-@import "styles/cards.scss";
+@import "../pages/landing-page/styles/main.scss";
+@import "../pages/landing-page/styles/cards.scss";
+
 
 body {
   font-family: var(--font);
@@ -14,8 +15,11 @@ body {
   align-items: center;
   padding: 159px auto;
 
-  @media screen and (max-width: 600px) {
-    height: auto;
+  @media screen and (max-width: 835px) {
+    height: 150vh;
+  }
+  @media screen and (max-width: 450px) {
+    height: 200vh;
   }
 }
 

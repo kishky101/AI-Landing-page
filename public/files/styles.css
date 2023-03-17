@@ -7,6 +7,7 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -321,116 +322,200 @@ template {
   --background-color: #0F162D;
   --text-color: #FFFFFF;
   --font: "DM Sans", sans-serif;
+  --24--px: 24px;
+  --16--px: 16px;
+  --14--px: 14px;
+  --496--px: 496px;
+  --343--px: 343px;
 }
 
 .main-container {
-  height: auto;
-  width: 80%;
+  max-width: 1440px;
+  max-height: 810px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--16--px);
+}
+.main-container .l-main {
+  max-width: 1136px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 109px;
 }
-.main-container .main-container__texts {
-  width: 90%;
+.main-container__texts {
+  max-width: 467px;
+  margin-right: 109px;
 }
-.main-container .main-container__h1 {
+.main-container__h1 {
   font-weight: 400;
-  font-size: 2.5rem;
-  line-height: 1;
-  letter-spacing: 1px;
+  font-size: 3rem;
+  line-height: 56px;
+  margin-bottom: var(--24--px);
 }
-.main-container .main-container__p {
-  font-size: 14px;
+.main-container__desc {
+  font-weight: 400;
+  font-size: var(--16--px);
   line-height: 1.5;
-  letter-spacing: 1px;
   opacity: 0.9;
   text-align: left;
+  line-height: var(--24--px);
 }
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 835px) {
   .main-container {
+    max-height: 1194px;
+    max-width: 834px;
+    height: auto;
+  }
+  .main-container .l-main {
     flex-direction: column;
     width: 90%;
-    gap: 24px;
+    gap: var(--24--px);
+    max-width: var(--496--px);
+    height: auto;
+    max-height: 700px;
+  }
+  .main-container__texts {
+    margin-right: 0;
+    max-width: var(--496--px);
+  }
+  .main-container__h1 {
+    margin-bottom: 16px;
+    max-width: var(--496--px);
+    width: var(--496--px);
+  }
+  .main-container__desc {
+    max-width: var(--496--px);
+    width: var(--496--px);
   }
 }
 @media screen and (max-width: 600px) {
-  .main-container {
+  .main-container .l-main {
     width: auto;
-    margin: 3rem auto;
   }
-  .main-container .main-container__texts {
+  .main-container__texts {
     width: auto;
-    padding: 10px;
+    margin-right: 0;
   }
 }
-@media screen and (max-width: 400px) {
-  .main-container .main-container__h1 {
+@media screen and (max-width: 450px) {
+  .main-container .l-main {
+    align-items: center;
+  }
+  .main-container__texts {
+    max-width: var(--343--px);
+  }
+  .main-container__h1 {
     font-size: 2rem;
+    max-width: var(--343--px);
+    line-height: 40px;
+  }
+  .main-container__desc {
+    max-width: var(--343--px);
   }
 }
 
-.main-container__cards .card-image--yellow, .main-container__cards .card-image--green, .main-container__cards .card-image--blue, .main-container__cards .card-image--purple {
+.main-container__svg--yellow, .main-container__svg--green, .main-container__svg--blue, .main-container__svg--purple {
   width: 4rem;
   height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  line-height: var(--24--px);
+  text-align: center;
 }
 
 .main-container__cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: 24px;
+  column-gap: var(--24--px);
   row-gap: 31px;
+  max-width: 560px;
+  padding-top: 2rem;
 }
-.main-container__cards .card {
+.main-container__card {
   background-color: #272D42;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border-radius: 24px;
-  padding: 24px;
+  border-radius: var(--24--px);
+  padding: var(--24--px) 16px;
+  max-width: 268px;
 }
-.main-container__cards .card-h2 {
-  font-weight: 400;
-  font-size: 16px;
+.main-container__h2 {
+  font-weight: 500;
+  font-size: 20px;
   text-align: center;
 }
-.main-container__cards .card-p {
+.main-container__p {
   text-align: center;
-  font-size: 14px;
+  font-size: var(--16--px);
   font-weight: 100;
   opacity: 0.5;
-  line-height: 1.5;
-  letter-spacing: 1px;
+  line-height: var(--24--px);
 }
-.main-container__cards .card-image--purple {
+.main-container__svg--purple {
   background-color: #373155;
 }
-.main-container__cards .card-image--blue {
+.main-container__svg--blue {
   background-color: #2C3455;
 }
-.main-container__cards .card-image--green {
+.main-container__svg--green {
   background-color: #274255;
 }
-.main-container__cards .card-image--yellow {
+.main-container__svg--yellow {
   background-color: #3D413F;
+  height: 4rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 835px) {
+  .main-container .main-container__svg--purple, .main-container .main-container__svg--blue, .main-container .main-container__svg--green, .main-container .main-container__svg--yellow {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
   .main-container__cards {
-    padding: 10px;
+    width: 496px;
+    max-width: 496px;
+    column-gap: var(--16--px);
+    row-gap: var(--16--px);
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .main-container__card {
+    padding: 0;
+    gap: 0;
+  }
+  .main-container__h2 {
+    width: 100%;
+  }
+  .main-container__p {
+    font-size: var(--14--px);
+    line-height: 22px;
+    margin-bottom: 20px;
+    margin: 16px 17px 20px 14px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .main-container__cards {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    row-gap: 24px;
+    row-gap: var(--16--px);
+    place-items: center;
+    max-width: var(--343--px);
+  }
+  .main-container__card {
+    width: 100%;
+    max-width: var(--343--px);
+  }
+  .main-container__P {
+    margin: 16px 20px 20px 20px;
+    padding: 0 5px;
   }
 }
 
@@ -444,9 +529,14 @@ body {
   align-items: center;
   padding: 159px auto;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 835px) {
   body {
-    height: auto;
+    height: 150vh;
+  }
+}
+@media screen and (max-width: 450px) {
+  body {
+    height: 200vh;
   }
 }
 

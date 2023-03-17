@@ -1,0 +1,105 @@
+.main-container {
+    max-width: 1440px;
+    max-height: 810px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--16--px);
+
+    .l-main {
+        max-width: 1136px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__texts {
+        max-width: 467px;
+        margin-right: 109px;
+    }
+
+    &__h1 {
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 56px;
+        margin-bottom: var(--24--px);
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: var(--16--px);
+        line-height: 1.5;
+        opacity: .9;
+        text-align: left;
+        line-height: var(--24--px);
+    }
+
+    @media screen and (max-width: 835px) {
+        max-height: 1194px;
+        max-width: 834px;
+        height: auto;
+
+        .l-main {
+            flex-direction: column;
+            width: 90%;
+            gap: var(--24--px);
+            max-width: var(--496--px);
+            height: auto;
+            max-height: 700px;
+        }
+
+        &__texts {
+            margin-right: 0;
+            max-width: var(--496--px);
+        }
+
+        &__h1 {
+            margin-bottom: 16px;
+            max-width: var(--496--px);
+            width: var(--496--px);
+        }
+
+        &__desc {
+            max-width:  var(--496--px);
+            width: var(--496--px);
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .l-main {
+            width: auto; 
+        }
+
+
+        &__texts {
+            width: auto;
+            margin-right: 0;
+        }
+
+
+        
+    }
+
+    @media screen and (max-width: 450px) {
+
+        .l-main {
+            align-items: center;
+        }
+
+        &__texts {
+            max-width: var(--343--px);
+        }
+
+        &__h1 {
+            font-size: 2rem;
+            max-width: var(--343--px);
+            line-height: 40px;
+        }
+
+        &__desc {
+            max-width: var(--343--px);
+        }
+    }
+}
