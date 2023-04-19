@@ -15,11 +15,11 @@ body {
   align-items: center;
   padding: 159px auto;
 
-  @media screen and (max-width: 835px) {
-    height: 150vh;
+  @media screen and (max-width: 1000px) {
+    height: 130dvh;
   }
   @media screen and (max-width: 450px) {
-    height: 200vh;
+    height: 170dvh;
   }
 }
 

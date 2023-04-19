@@ -7,7 +7,6 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -361,7 +360,7 @@ template {
   text-align: left;
   line-height: var(--24--px);
 }
-@media screen and (max-width: 835px) {
+@media screen and (max-width: 1000px) {
   .main-container {
     max-height: 1194px;
     max-width: 834px;
@@ -471,7 +470,7 @@ template {
   background-color: #3D413F;
   height: 4rem;
 }
-@media screen and (max-width: 835px) {
+@media screen and (max-width: 1000px) {
   .main-container .main-container__svg--purple, .main-container .main-container__svg--blue, .main-container .main-container__svg--green, .main-container .main-container__svg--yellow {
     width: 3.5rem;
     height: 3.5rem;
@@ -529,14 +528,14 @@ body {
   align-items: center;
   padding: 159px auto;
 }
-@media screen and (max-width: 835px) {
+@media screen and (max-width: 1000px) {
   body {
-    height: 150vh;
+    height: 130dvh;
   }
 }
 @media screen and (max-width: 450px) {
   body {
-    height: 200vh;
+    height: 170dvh;
   }
 }
 
