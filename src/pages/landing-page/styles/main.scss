@@ -1,28 +1,26 @@
 .main-container {
     max-width: 1440px;
-    max-height: 810px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--16--px);
+    padding: 159px 16px 140px;
 
     .l-main {
         max-width: 1136px;
         display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        gap: 109px;
     }
 
     &__texts {
         max-width: 467px;
-        margin-right: 109px;
+        display: flex;
+        flex-direction: column;
+        gap:  var(--24--px);
     }
 
     &__h1 {
-        font-weight: 400;
+        font-weight: 500;
         font-size: 3rem;
         line-height: 56px;
-        margin-bottom: var(--24--px);
+        margin-bottom: 0;
     }
 
     &__desc {
@@ -35,71 +33,52 @@
     }
 
     @media screen and (max-width: 1000px) {
-        max-height: 1194px;
+        padding: 247px 16px 169px;
         max-width: 834px;
-        height: auto;
 
         .l-main {
             flex-direction: column;
-            width: 90%;
-            gap: var(--24--px);
+            gap:28px;
             max-width: var(--496--px);
-            height: auto;
-            max-height: 700px;
         }
 
         &__texts {
             margin-right: 0;
             max-width: var(--496--px);
+            gap: var(--16--px);
         }
 
         &__h1 {
-            margin-bottom: 16px;
+            margin-bottom: 0;
             max-width: var(--496--px);
-            width: var(--496--px);
         }
 
         &__desc {
             max-width:  var(--496--px);
-            width: var(--496--px);
         }
 
     }
 
-    @media screen and (max-width: 600px) {
-
-        .l-main {
-            width: auto; 
-        }
-
+    @media screen and (max-width: 550px) {
+        max-width: unset;
+        padding: 48px 16px 64px;
 
         &__texts {
-            width: auto;
             margin-right: 0;
-        }
-
-
-        
-    }
-
-    @media screen and (max-width: 450px) {
-
-        .l-main {
-            align-items: center;
-        }
-
-        &__texts {
-            max-width: var(--343--px);
+            max-width: unset;
+            gap: var(--16--px);
         }
 
         &__h1 {
             font-size: 2rem;
-            max-width: var(--343--px);
+            margin-bottom: 0;
+            max-width: unset;
             line-height: 40px;
+
         }
 
         &__desc {
-            max-width: var(--343--px);
+            max-width:  unset;
         }
     }
 }

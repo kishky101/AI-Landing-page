@@ -9,18 +9,9 @@ body {
   font-family: var(--font);
   color: var(--text-color);
   background: var(--background-color);
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 159px auto;
-
-  @media screen and (max-width: 1000px) {
-    height: 130dvh;
-  }
-  @media screen and (max-width: 450px) {
-    height: 170dvh;
-  }
 }
 
 p {

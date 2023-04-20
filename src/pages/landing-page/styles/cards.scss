@@ -1,5 +1,3 @@
-$card-color:  #272D42;
-
 %card-image {
     width: 4rem;
     height: 4rem;
@@ -15,8 +13,7 @@ $card-color:  #272D42;
 
     &__cards {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template: repeat(2,minmax(240px,1fr))/repeat(2,268px);
         column-gap: var(--24--px);
         row-gap: 31px;
         max-width: 560px;
@@ -24,51 +21,73 @@ $card-color:  #272D42;
     }
 
     &__card {
-        background-color: $card-color;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+        background-color: var(--card-color);
+        position: relative;
         border-radius: var(--24--px);
         padding:var(--24--px) 16px;
-        max-width: 268px;
+        transition: all .5s;
+
+        &--purple:hover {
+            background-color: var(--purple-clr-hov);
+        }
+        &--blue:hover {
+            background-color: var(--blue-clr-hov);
+        }
+        &--green:hover {
+            background-color: var(--green-clr-hov);
+        }
+        &--yellow:hover {
+            background-color: var(--yellow-clr-hov);
+        }
     }
     
     &__h2 {
         font-weight: 500;
         font-size: 20px; 
         text-align: center;
+        margin-top: 1rem;
     }
 
     &__p {
+        margin-top: 1rem;
         text-align: center;
         font-size: var(--16--px);
-        font-weight: 100;
+        font-weight: 400;
         opacity: .5;
         line-height: var(--24--px);
     }
 
     &__svg {
+        position: relative;
+        margin: 0 auto;
+        border-radius: 1rem;
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%) translateY(-50%);
+        }
+
 
         &--purple {
             @extend %card-image;
-            background-color: #373155;
+            background-color: var(--purple-clr);
         }
 
         &--blue {
             @extend %card-image;
-            background-color: #2C3455;
+            background-color: var(--blue-clr);
         }
     
         &--green {
             @extend %card-image;
-            background-color: #274255;
+            background-color: var(--green-clr);
         }
     
         &--yellow {
             @extend %card-image;
-            background-color: #3D413F;
+            background-color: var(--yellow-clr);
             height: 4rem;
         }
 
@@ -77,25 +96,23 @@ $card-color:  #272D42;
     @media screen and (max-width: 1000px) {
 
         %card-image {
-            width: 3.5rem;
-            height: 3.5rem;
+            width: 3.375rem;
+            height: 3.375rem;
             border-radius: 15px;
-            margin-top: 20px;
-            margin-bottom: 16px;
         }
 
         &__cards{
             width: 496px;
             max-width: 496px;
-            column-gap: var(--16--px);
-            row-gap: var(--16--px);
             margin-top: 0;
             padding-top: 0;
+            grid-template: repeat(2,minmax(218px,1fr))/repeat(2,240px);
+            grid-auto-rows: minmax(218px,1fr);
+            gap: var(--16--px);
         }
 
         &__card {
-            padding: 0;
-            gap: 0;
+            padding: 1.25rem 1.063rem 1.25rem 1rem;
         }
 
         &__h2 {
@@ -105,30 +122,27 @@ $card-color:  #272D42;
         &__p {
             font-size: var(--14--px);
             line-height: 22px;
-            margin-bottom: 20px;
-            margin: 16px 17px 20px 14px;
         }
     }
     
 
-    @media screen and (max-width: 450px) {
+     @media screen and (max-width: 550px) {
         &__cards {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            row-gap: var(--16--px);
-            place-items: center;
-            max-width: var(--343--px);
+            display: flex;
+            flex-direction: column;
+            width: unset;
+            width: unset;
         }
 
         &__card {
-            width: 100%;
-            max-width: var(--343--px);
+           width: 100%;
         }
 
-        &__P {
-            margin: 16px 20px 20px 20px;
-            padding: 0 5px;
+        &__h2 {
+            font-weight: 400;
+            margin-top: 1.1rem;
         }
-    } 
+
+     } 
 }
 
