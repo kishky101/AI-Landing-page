@@ -105,13 +105,14 @@
             width: 496px;
             max-width: 496px;
             margin-top: 0;
-            padding-top: 0;
+            padding-top: 0; 
             grid-template: repeat(2,minmax(218px,1fr))/repeat(2,240px);
             grid-auto-rows: minmax(218px,1fr);
             gap: var(--16--px);
         }
 
         &__card {
+            border-radius: var(--16--px);
             padding: 1.25rem 1.063rem 1.25rem 1rem;
         }
 
@@ -139,7 +140,6 @@
         }
 
         &__h2 {
-            font-weight: 400;
             margin-top: 1.1rem;
         }
 

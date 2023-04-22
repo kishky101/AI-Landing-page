@@ -334,6 +334,7 @@ template {
   --green-clr-hov: #27425580;
   --blue-clr-hov: #2C345580;
   --yellow-clr-hov: #3D413F80;
+  --card-color:#272D42;
 }
 
 .main-container {
@@ -430,7 +431,7 @@ template {
   padding-top: 2rem;
 }
 .main-container__card {
-  background-color: #272D42;
+  background-color: var(--card-color);
   position: relative;
   border-radius: var(--24--px);
   padding: var(--24--px) 16px;
@@ -502,6 +503,7 @@ template {
     gap: var(--16--px);
   }
   .main-container__card {
+    border-radius: var(--16--px);
     padding: 1.25rem 1.063rem 1.25rem 1rem;
   }
   .main-container__h2 {
@@ -523,7 +525,6 @@ template {
     width: 100%;
   }
   .main-container__h2 {
-    font-weight: 400;
     margin-top: 1.1rem;
   }
 }
@@ -536,6 +537,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 p {
   color: var(--text-color);
 }
