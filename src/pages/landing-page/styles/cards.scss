@@ -12,32 +12,34 @@
 .main-container {
 
     &__cards {
-        display: grid;
-        grid-template: repeat(2,minmax(240px,1fr))/repeat(2,268px);
-        column-gap: var(--24--px);
+        display: flex;
+        flex-direction: column;
+        //grid-template: repeat(2,minmax(240px,1fr))/repeat(1, 536px);
+        //column-gap: var(--24--px);
         row-gap: 31px;
         max-width: 560px;
         padding-top: 2rem;
     }
 
+    &__cards-l {
+        display: flex;
+        gap: var(--24--px);
+    }
+
     &__card {
         background-color: var(--card-color);
         position: relative;
+        min-width: 268px;
         border-radius: var(--24--px);
         padding:var(--24--px) 16px;
         transition: all .5s;
 
-        &--purple:hover {
-            background-color: var(--purple-clr-hov);
+        &--purple {
+            padding:var(--24--px) 13px var(--24--px) var(--16--px);
         }
-        &--blue:hover {
-            background-color: var(--blue-clr-hov);
-        }
-        &--green:hover {
-            background-color: var(--green-clr-hov);
-        }
-        &--yellow:hover {
-            background-color: var(--yellow-clr-hov);
+
+        &--green {
+            padding:var(--24--px) 13px var(--24--px) var(--16--px);
         }
     }
     
@@ -45,11 +47,11 @@
         font-weight: 500;
         font-size: 20px; 
         text-align: center;
-        margin-top: 1rem;
+        margin-top: 18px;
     }
 
     &__p {
-        margin-top: 1rem;
+        margin-top: 15px;
         text-align: center;
         font-size: var(--16--px);
         font-weight: 400;
@@ -96,8 +98,8 @@
     @media screen and (max-width: 1000px) {
 
         %card-image {
-            width: 3.375rem;
-            height: 3.375rem;
+            width: 3.5rem;
+            height: 3.5rem;
             border-radius: 15px;
         }
 
@@ -106,23 +108,56 @@
             max-width: 496px;
             margin-top: 0;
             padding-top: 0; 
-            grid-template: repeat(2,minmax(218px,1fr))/repeat(2,240px);
-            grid-auto-rows: minmax(218px,1fr);
+            //grid-template: repeat(2,minmax(218px,1fr))/repeat(2,240px);
+            //grid-auto-rows: minmax(218px,1fr);
+            gap: var(--16--px);
+        }
+
+        &__cards-l {
+            display: flex;
             gap: var(--16--px);
         }
 
         &__card {
-            border-radius: var(--16--px);
+            border-radius: 20px;
+            min-width: 240px;
             padding: 1.25rem 1.063rem 1.25rem 1rem;
+
+            &--purple {
+                //padding: 1.25rem 1.063rem 1.25rem 1.3rem;
+                padding: 1.25rem 1.063rem 1.25rem 1.1rem;
+            }
+
+            &--green {
+                padding: 1.25rem 1.063rem 1.25rem 1.1rem;
+            }
+
         }
 
         &__h2 {
             width: 100%;
+            margin-top: 18px;
         }
 
         &__p {
+            margin-top: var(--16--px);
             font-size: var(--14--px);
             line-height: 22px;
+        }
+
+        &__svg {
+            position: relative;
+            margin: 0 auto;
+            border-radius: 1rem;
+    
+            img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%) translateY(-50%);
+                width: 28px;
+                height: 28px;
+            }
         }
     }
     
@@ -135,12 +170,26 @@
             width: unset;
         }
 
+        &__cards-l {
+            flex-direction: column;
+            gap: var(--16--px);
+        }
+
         &__card {
            width: 100%;
+
+           &--purple {
+                //padding: 1.25rem 1.063rem 1.25rem 1.3rem;
+                padding: 1.25rem 1.163rem 1.25rem 1.3rem;
+            }
+
+            &--green {
+                padding: 1.25rem 1.163rem 1.25rem 1rem;
+            }
         }
 
         &__h2 {
-            margin-top: 1.1rem;
+            margin-top: 17px;
         }
 
      } 

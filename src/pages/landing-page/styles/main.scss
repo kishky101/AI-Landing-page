@@ -38,7 +38,7 @@
 
         .l-main {
             flex-direction: column;
-            gap:28px;
+            gap: 24px;
             max-width: var(--496--px);
         }
 
@@ -61,7 +61,8 @@
 
     @media screen and (max-width: 550px) {
         max-width: unset;
-        padding: 48px 16px 64px;
+        //padding: 48px 16px 64px;
+        padding: 48px 6px 64px 10px;
 
         &__texts {
             margin-right: 0;
