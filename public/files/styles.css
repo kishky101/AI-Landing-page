@@ -507,18 +507,12 @@ template {
     min-width: 240px;
     padding: 1.25rem 1.063rem 1.25rem 1rem;
   }
-  .main-container__card--purple {
-    padding: 1.25rem 1.063rem 1.25rem 1.1rem;
-  }
-  .main-container__card--green {
-    padding: 1.25rem 1.063rem 1.25rem 1.1rem;
-  }
   .main-container__h2 {
     width: 100%;
     margin-top: 18px;
   }
   .main-container__p {
-    margin-top: var(--16--px);
+    margin-top: 15px;
     font-size: var(--14--px);
     line-height: 22px;
   }
@@ -555,9 +549,6 @@ template {
   }
   .main-container__card--green {
     padding: 1.25rem 1.163rem 1.25rem 1rem;
-  }
-  .main-container__h2 {
-    margin-top: 17px;
   }
 }
 

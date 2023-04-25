@@ -122,16 +122,6 @@
             border-radius: 20px;
             min-width: 240px;
             padding: 1.25rem 1.063rem 1.25rem 1rem;
-
-            &--purple {
-                //padding: 1.25rem 1.063rem 1.25rem 1.3rem;
-                padding: 1.25rem 1.063rem 1.25rem 1.1rem;
-            }
-
-            &--green {
-                padding: 1.25rem 1.063rem 1.25rem 1.1rem;
-            }
-
         }
 
         &__h2 {
@@ -140,7 +130,7 @@
         }
 
         &__p {
-            margin-top: var(--16--px);
+            margin-top: 15px;
             font-size: var(--14--px);
             line-height: 22px;
         }
@@ -179,17 +169,12 @@
            width: 100%;
 
            &--purple {
-                //padding: 1.25rem 1.063rem 1.25rem 1.3rem;
                 padding: 1.25rem 1.163rem 1.25rem 1.3rem;
             }
 
             &--green {
                 padding: 1.25rem 1.163rem 1.25rem 1rem;
             }
-        }
-
-        &__h2 {
-            margin-top: 17px;
         }
 
      } 
